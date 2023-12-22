@@ -1,0 +1,650 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica", sans-serif;
+  font-weight: bold;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgba(255, 255, 255, 0.527);
+}
+
+header {
+  background-image: linear-gradient(
+      rgba(120, 164, 221, 0.6),
+      rgba(120, 164, 221, 0.6)
+    ),
+    url("https://merahputih.com/media/75/50/12/75501286711dbeb26ede11221d7095fc.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.containers {
+  width: 80%;
+  margin-inline: auto;
+}
+
+.navbar {
+  padding: 12px 0 12px 0;
+  position: fixed;
+  width: 100%;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.navbar.scrolling-active {
+  background-color: rgb(1, 91, 175);
+  padding: 9px 0 9px 0;
+}
+
+.navbar .box-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .box-navbar .logo {
+  display: flex;
+  align-items: center;
+}
+.navbar .box-navbar .logo h4:nth-of-type(1) {
+  color: white;
+  font-weight: bold;
+}
+.navbar .box-navbar .logo h4:nth-of-type(2) {
+  color: rgb(253, 253, 13);
+  font-weight: bold;
+}
+
+.navbar .box-navbar .logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.navbar .box-navbar .menu {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.navbar .box-navbar .menu li {
+  list-style: none;
+}
+
+.navbar .box-navbar .menu li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 10px 15px 10px 15px;
+  /* text-transform: uppercase; */
+}
+
+.navbar .box-navbar .menu li a:hover {
+  background-color: rgb(240, 236, 11);
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.menu-bar {
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  display: none;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.hero .box-hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  column-gap: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+.box img {
+  width: 270px;
+}
+/* CSS for the typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 103%;
+  }
+}
+
+.box-hero h1:nth-of-type(1) {
+  font-weight: bold;
+}
+.box-hero h1:nth-of-type(2) {
+  overflow: hidden;
+  border-right: 0.15em solid rgb(0, 0, 0); /* Menambahkan garis imitasi kursor mengetik */
+  white-space: nowrap;
+  margin: 0;
+  letter-spacing: 0.1em;
+  animation: typing 8s steps(40) infinite;
+  font-weight: bold;
+}
+
+.hero .box-hero .box:nth-child(1) h1 {
+  color: white;
+  font-size: 3vw;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.hero .box-hero .box:nth-child(1) p {
+  line-height: 2;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.hero .box-hero .box:nth-child(1) button {
+  width: 180px;
+  height: 50px;
+  background-color: chocolate;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.custom {
+  border: none;
+  border: 3px solid rgb(1, 91, 175);
+  width: 70%;
+  margin: 0 auto;
+  opacity: 1;
+}
+.step {
+  /* background-image: url("https://png.pngtree.com/background/20220728/original/pngtree-batik-mega-mendung-picture-image_1848909.jpg"); */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 5px;
+}
+
+.step .box-step {
+  display: flex;
+  justify-content: center;
+}
+
+.panduan-card {
+  border-color: #0056b3;
+  border-radius: 50px;
+  background-color: #64abf8;
+  width: 300px;
+  height: auto;
+  border-style: dashed;
+}
+
+.panduan-card img {
+  width: 150px;
+  margin-bottom: 0;
+}
+
+.step .box-step .logo {
+  display: flex;
+  justify-content: center;
+  column-gap: 1px;
+  margin-top: 0%;
+}
+.step .box-step .logo img {
+  width: 230px;
+}
+.step .box-step .logo h1 {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 3vw;
+  line-height: 1.3;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.step .box-step h1:nth-of-type(1) {
+  animation: fadeInUp 2s forwards;
+  animation-delay: 0s;
+}
+/* 
+.step .box-step h2:nth-of-type(2) {
+  animation: fadeInUp 2s forwards;
+  animation-delay: 2s;
+}
+.step .box-step h2:nth-of-type(3) {
+  animation: fadeInUp 2s forwards;
+  animation-delay: 4s;
+}
+.step .box-step h2:nth-of-type(4) {
+  animation: fadeInUp 2s forwards;
+  animation-delay: 6s;
+}
+.step .box-step h2:nth-of-type(5) {
+  animation: fadeInUp 2s forwards;
+  animation-delay: 8s;
+}
+.step .box-step h2:nth-of-type(6) {
+  animation: fadeInUp 2s forwards;
+  animation-delay: 10s;
+} */
+
+/* Animasi fadeInUp */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.linking {
+  background-image: url("https://cdn.pixabay.com/photo/2019/10/01/13/57/megamendung-batik-pattern-4518352_960_720.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 5px;
+}
+
+.linking .box-linking {
+  display: flex;
+  justify-content: center;
+}
+
+.linking .box-linking .title {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.linking .box-linking .title h1 {
+  background-color: #0056b3;
+  border: 10px;
+  border-radius: 10px;
+  padding: 5px 5px;
+  font-size: 40px;
+}
+.linking .box-linking .title h1:nth-of-type(1) {
+  color: white;
+  font-weight: bold;
+}
+.linking .box-linking .title h1:nth-of-type(2) {
+  color: rgb(253, 253, 13);
+  font-weight: bold;
+}
+
+.box-card-lingking {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  row-gap: 60px;
+}
+.card {
+  border: none;
+  background-color: #ffffffa4;
+  width: 250px;
+  height: 220px;
+
+  &:hover,
+  &:focus-within {
+    transform: scale(1.08);
+    box-shadow: 0 0.4rem 0.4rem rgb(0, 0, 0);
+    transition: 0.2s ease-in-out;
+    transform: translateY(-1rem);
+    backdrop-filter: blur(0.5rem);
+  }
+
+  &:not(:focus-within) {
+    transition: 0.2s ease-in-out;
+  }
+}
+
+.linking-card img {
+  width: 150px;
+}
+
+.linking-card a {
+  color: #0056b3;
+}
+
+/* Style for contact form section */
+.contact {
+  padding: 60px 0;
+}
+
+.box-contact {
+  padding: 40px;
+}
+
+.box-contact h5 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  box-shadow: none;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.btn-primary:hover {
+  background-color: rgb(240, 236, 11);
+  border-color: #0056b3;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .box-contact {
+    padding: 20px;
+  }
+  .box-contact h5 {
+    font-size: 20px;
+  }
+}
+
+.footer {
+  padding: 50px 0 50px 0;
+  background-color: rgb(1, 91, 175);
+  color: white;
+}
+
+.footer .box-footer {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  column-gap: 100px;
+  align-items: center;
+}
+
+.footer .box-footer .box {
+  color: white;
+}
+
+.footer .box-footer .box:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.footer .box-footer .box:nth-child(2) a {
+  text-decoration: none;
+  color: white;
+  font-family: 200;
+}
+
+.footer .box-footer .box p {
+  font-weight: 400;
+}
+
+.footer .box-footer .box:nth-child(3) span {
+  font-weight: bold;
+  color: white;
+}
+
+.footer .box-footer .box:nth-child(1) p {
+  font-size: 12px;
+  line-height: 2;
+  margin-top: 10px;
+}
+
+.footer .box-footer .box:nth-child(3) {
+  text-align: center;
+}
+
+.footer .box .social-links {
+  display: flex;
+  justify-content: start;
+  column-gap: 15px;
+  margin-top: 10%;
+}
+.footer .box .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 4px;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+.footer .box .social-links a:hover {
+  background: rgb(240, 236, 11);
+  color: #fff;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .hero .box-hero .box:nth-child(1) button {
+    width: 150px;
+  }
+
+  .box-hero h1:nth-of-type(2) {
+    border: none; /* Hilangkan efek mengetik di tampilan mobile */
+    animation: none; /* Menghentikan animasi pada tampilan mobile */
+  }
+
+  .card .box-card .box {
+    height: 55vh;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .menu-bar {
+    margin-left: 10px;
+    display: block;
+  }
+
+  .navbar .box-navbar .menu {
+    background-color: rgb(1, 91, 175);
+    position: absolute;
+    flex-direction: column;
+    width: 100%;
+    height: 220px;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    top: 70px;
+    right: 50%;
+    transform: translateX(50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    /* background-color: chocolate; */
+  }
+
+  .navbar .box-navbar .menu.menu-active {
+    top: 80px;
+    opacity: 1;
+    border-top: 1px solid white;
+  }
+
+  .hero .box-hero .box:nth-child(1) p {
+    font-size: 14px;
+  }
+  .box-hero h1:nth-of-type(2) {
+    border: none; /* Hilangkan efek mengetik di tampilan mobile */
+    animation: none; /* Menghentikan animasi pada tampilan mobile */
+  }
+
+  .shop .box-shop h1 {
+    font-size: 28px;
+  }
+
+  .card .box-card .box {
+    height: 55vh;
+  }
+
+  .footer .box-footer {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero .box-hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 10px;
+  }
+  .box-hero h1:nth-of-type(2) {
+    border: none; /* Hilangkan efek mengetik di tampilan mobile */
+    animation: none; /* Menghentikan animasi pada tampilan mobile */
+  }
+
+  .hero .box-hero .box:nth-child(1) {
+    order: 2;
+    text-align: center;
+  }
+
+  .hero .box-hero .box:nth-child(2) {
+    order: 1;
+    text-align: center;
+  }
+
+  .hero .box-hero .box:nth-child(2) img {
+    width: 60vw;
+  }
+
+  .card .box-card .box {
+    height: 55vh;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .hero .box-hero .box:nth-child(1) h1 {
+    font-size: 18px;
+  }
+  .box-hero h1:nth-of-type(2) {
+    border: none; /* Hilangkan efek mengetik di tampilan mobile */
+    animation: none; /* Menghentikan animasi pada tampilan mobile */
+  }
+
+  .card .box-card .box {
+    height: 55vh;
+  }
+}
+
+@media screen and (max-width: 522px) {
+  .shop .box-shop button {
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .hero .box-hero .box:nth-child(2) {
+    width: 60vw;
+    align-self: flex-end;
+    text-align: center;
+    justify-content: center;
+  }
+  .box-hero h1:nth-of-type(2) {
+    border: none; /* Hilangkan efek mengetik di tampilan mobile */
+    animation: none; /* Menghentikan animasi pada tampilan mobile */
+  }
+
+  .card .box-card {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+/* Media queries untuk responsif */
+@media screen and (max-width: 768px) {
+  .step .box-step .logo h1 {
+    font-size: 7vw; /* Ubah ukuran font untuk layar lebih kecil */
+  }
+
+  .step .box-step .logo img {
+    width: 170px; /* Ubah lebar gambar untuk layar lebih kecil */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .step .box-step .logo h1 {
+    font-size: 5vw; /* Ukuran font lebih besar untuk layar yang lebih kecil */
+  }
+
+  .step .box-step .logo img {
+    width: 150px; /* Ukuran gambar lebih kecil untuk layar yang lebih kecil */
+  }
+}
+/* Pengaturan untuk layar kecil */
+@media (max-width: 768px) {
+  .box-card-lingking {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .linking-card img {
+    width: 140px;
+  }
+  .linking .box-linking .title h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .row.gap-4 {
+    justify-content: center;
+  }
+  .col-md-3 {
+    flex: 0 0 79%;
+    max-width: 100%;
+  }
+}
+
+.gotopbtn {
+  position: fixed;
+  width: 40.6px;
+  height: 45px;
+  background: #ffffff;
+  bottom: 20px;
+  right: 12px;
+  border-radius: 30px;
+  text-decoration: overline;
+  text-align: center;
+  line-height: 50px;
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  scroll-behavior: smooth;
+}
+.gotopbtn:hover {
+  box-shadow: inset 100px 0 0 0 #0059ff;
+  color: white;
+}
