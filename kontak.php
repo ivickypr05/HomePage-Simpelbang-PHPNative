@@ -41,7 +41,9 @@
                                 Hubungi Kami
                             </h5>
                             <div class="row">
-                                <form action="" method="post">
+                                <form action="
+                                <!-- function/proses.contact.php -->
+                                " method="post">
                                     <div class="row">
                                         <div class="col-md-6 form-group">
                                             <input type="text" name="name" class="form-control" id="name" placeholder="Your Name">
